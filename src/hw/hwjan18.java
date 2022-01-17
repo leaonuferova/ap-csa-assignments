@@ -9,15 +9,17 @@ B) Count the occurrence of numbers within interval <10, 50> and print the result
 where you will choose n and m in the beginning of the program. (n,m < 1000) */
 package hw;
 
+import javax.swing.event.SwingPropertyChangeSupport;
+
 public class hwjan18 {
     public static void main(String[] args) {
-        // taskoneA();
-        // taskoneB();
-        // tasktwoA();
-        // tasktwoB();
+        taskoneA();
+        taskoneB();
+        tasktwoA();
+        tasktwoB();
         taskthreeoneA();
-        // taskthreeoneB();
-        // taskthreetwo();
+        taskthreeoneB();
+        taskthreetwo();
 
     }
 
@@ -63,16 +65,51 @@ public class hwjan18 {
     }
 
     static void taskthreeoneA() {
-        int matrix[][] = new int[10][100];
-        int n = 0;
-        int m = 0;
+        int matrix[][] = new int[20][22];
+        int y = 0;
         for (int i = 0; i < matrix.length; i++) {
-            for (int x = 0; x < matrix[n].length; x++) {
-                matrix[n][m] +=1;
-                System.out.println(matrix[n][m]);
-                n+=1;
+            for (int x = 0; x < matrix[i].length; x++) {
+                matrix[i][x] = ++y;
+                //System.out.print(matrix[i][x] + " ");
+                System.out.printf("%6d", matrix[i][x]);
             }
-            m+=1;
+            System.out.println();
         }
     }
+
+    static void taskthreeoneB() {
+        int matrix[][] = new int[20][22];
+        int y = 1; //the difference
+        for (int i = 0; i < matrix.length; i++) {
+            for (int x = 0; x < matrix[i].length; x++) {
+                matrix[i][x] = ++y;
+                System.out.printf("%4d", matrix[i][x]);
+            }
+            System.out.println();
+        }
+    }
+
+    static void taskthreetwo(){
+        int pavucina[][] = new int[50][20];
+        int y = 0;
+        int z = 0;
+        for (int i = 0; i < pavucina.length; i++){
+            for (int x = 0; x < pavucina[i].length; x++){
+                pavucina[i][x] = (int) (Math.random()*1000);
+                System.out.printf("%4d", pavucina[i][x]);
+                if (pavucina[i][x] <= 50 && pavucina[i][x] >= 10) {
+                    z += 1;
+                }
+            }
+            System.out.println();
+
+        }
+
+        System.out.println("\nthe occurrence of numbers within interval <10, 50> :" + z);
+
+    }
+
+
+
+    
 }
