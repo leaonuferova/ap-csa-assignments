@@ -21,6 +21,7 @@ public class towers {
 
         }
         x = 0;
+        int crash = 0;
         while (x < 8) {
             for (i = 0; i < chifuyu.length; i++) {
 
@@ -28,24 +29,46 @@ public class towers {
                     z++;
                 }
             }
+            /** 
             if (z > 1) {
                 System.out.println("hups for column " + x);
             }
             if (z == 0) {
                 System.out.println("hups for column " + x);
             }
+            */
+            if ((z > 1) || (z == 0)){
+                System.out.println("hups for column " + x);
+                crash++;
+            }
+            
             x++;
             z = 0;
-
         }
+
 
         for (i = 0; i < chifuyu.length; i++) {
             for (x = 0; x < chifuyu[i].length; x++) {
-                System.out.printf("%4d", chifuyu[i][x]);
+                System.out.printf("%3d", chifuyu[i][x]);
             }
             System.out.println();
+        }
+
+
+        if (crash==0){
+            System.out.println("yay");
 
         }
+
+        if (crash>0){
+            System.out.println("towers crashed:(");
+            x = 0;
+
+        }
+
+        
+        
+        
 
     }
 }
