@@ -7,7 +7,7 @@ A) Create an Array of 1000 integer numbers with random numbers and then print th
 B) Count the occurrence of numbers within interval <10, 50> and print the result
 3. Do both above tasks with two-dimensional arrays [n][m], 
 where you will choose n and m in the beginning of the program. (n,m < 1000) */
-package hw;
+package src.hw;
 
 import javax.swing.event.SwingPropertyChangeSupport;
 

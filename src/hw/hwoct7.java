@@ -1,4 +1,4 @@
-package hw;
+package src.hw;
 
 
 public class hwoct7 {

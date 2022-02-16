@@ -1,4 +1,4 @@
-package hw;
+package src.hw;
 
 public class towers {
     public static void main(String[] args) {

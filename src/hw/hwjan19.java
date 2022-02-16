@@ -2,7 +2,7 @@
 // 2. What are the three most occurring numbers from that array and how often do they occur?
 // 3. Find the position (positions) of the element that takes the minimum value and print those positions
 
-package hw;
+package src.hw;
 
 public class hwjan19 {
     public static void main(String[] args) {
